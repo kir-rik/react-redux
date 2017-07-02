@@ -23,15 +23,28 @@
   to { transform: rotate(360deg); }
 }
 
-.repos-table {
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 50px;
-  border: 1px #000 solid;
+/*custom styles*/
 
+.repos-table {
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px #000 solid;
+    border-collapse: collapse
 }
 
-.repos-table th,
+.repos-table th {
+    padding: 10px;
+    border: 1px #000 solid;
+}
+
 .repos-table td {
-  padding:10px;
+    text-align: left;
+    padding: 10px 20px;
+    border: 1px #000 solid;
+}
+
+
+.search-box {
+    margin-top: 15px;
+    margin-bottom: 15px;
 }

@@ -5,7 +5,7 @@ import {
 } from '../constants/ReposTable'
 
 const initialState = {
-    user: 'kir-rik',
+    // user: 'kir-rik',
     repos: [],
     fetching: false
 }

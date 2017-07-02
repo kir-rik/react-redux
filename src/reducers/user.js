@@ -1,5 +1,5 @@
 const initialState = {
-    name: 'Аноним'
+    name: 'kir-rik'
 }
 
 export default function user(state = initialState) {
