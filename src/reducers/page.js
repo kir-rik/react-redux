@@ -1,7 +1,6 @@
-import { SET_YEAR } from '../constants/Page'
 import {
-  GET_PHOTOS_REQUEST,
-  GET_PHOTOS_SUCCESS
+    GET_PHOTOS_REQUEST,
+    GET_PHOTOS_SUCCESS
 } from '../constants/Page'
 
 const initialState = {
@@ -12,9 +11,6 @@ const initialState = {
 
 export default function page(state = initialState, action) {
     switch (action.type) {
-        case SET_YEAR:
-            return { ...state, year: action.payload }
-
         case GET_PHOTOS_REQUEST:
             return { ...state, year: action.payload, fetching: true }
 

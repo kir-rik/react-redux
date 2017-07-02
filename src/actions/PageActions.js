@@ -1,19 +1,8 @@
-import { SET_YEAR } from '../constants/Page'
 import {
-  GET_PHOTOS_REQUEST,
-  GET_PHOTOS_SUCCESS
+    GET_PHOTOS_REQUEST,
+    GET_PHOTOS_SUCCESS
 } from '../constants/Page'
 
-
-
-export function setYear(year) {
-
-    return {
-        type: SET_YEAR,
-        payload: year
-    }
-
-}
 
 export function getPhotos(year) {
 
