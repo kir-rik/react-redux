@@ -43,5 +43,5 @@ export default class ReposTable extends Component {
 
 ReposTable.propTypes = {
     repos: PropTypes.array.isRequired,
-    fetching: PropTypes.bool.isRequired
+    fetching: PropTypes.bool.isRequired,
 }

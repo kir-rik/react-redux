@@ -5,7 +5,6 @@ import {
 } from '../constants/ReposTable'
 
 const initialState = {
-    // user: 'kir-rik',
     repos: [],
     fetching: false
 }
@@ -19,7 +18,7 @@ export default function repos(state = initialState, action) {
             return { ...state, repos: action.payload, fetching: false, error: '' }
 
         case GET_REPOS_FAIL:
-            return { ...state, error: action.payload.message, fetching: false }
+            return { ...state, repos: [], error: action.payload, fetching: false }
 
         default:
             return state;
