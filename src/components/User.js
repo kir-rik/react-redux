@@ -9,6 +9,13 @@ export default class User extends Component {
         this.userName = this.props.name;
         this.handleChange = event => this.handleChange(event);
         this.onSearchBtnClick = () => this.props.getReposByUser(this.userName);
+        this.handleKeyPress = (event) => {
+            if (event.charCode === 13) {
+                this.onSearchBtnClick();
+            }
+        };
+
+        this.onSearchBtnClick();
     }
 
     render() {
@@ -18,6 +25,7 @@ export default class User extends Component {
                     <input type='text'
                         defaultValue={this.userName}
                         onChange={this.handleChange}
+                         onKeyPress={this.handleKeyPress}
                     />
                     <input type="button"
                         value="Get repos!"
