@@ -2,7 +2,7 @@ import {
     GET_REPOS_REQUEST,
     GET_REPOS_SUCCESS,
     GET_REPOS_FAIL,
-} from '../constants/ReposTable';
+} from '../constants/reposTable';
 
 const initialState = {
     repos: [],

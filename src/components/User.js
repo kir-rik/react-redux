@@ -7,7 +7,7 @@ export default class User extends Component {
         super(props);
 
         this.userName = this.props.name;
-        this.handleChange = event => this.handleChange(event);
+        this.handleChange = (event) => { this.userName = event.target.value; };
         this.onSearchBtnClick = () => this.props.getReposByUser(this.userName);
         this.handleKeyPress = (event) => {
             if (event.charCode === 13) {
