@@ -6,9 +6,9 @@ export default class ReposTable extends Component {
     getRow(rowData, index) {
         return (
           <tr key={index}>
-              <td>{rowData.name}</td>
-              <td>{rowData.language}</td>
-              <td>{rowData.description}</td>
+              <td><div>{rowData.name}</div></td>
+              <td><div>{rowData.language}</div></td>
+              <td><div>{rowData.description}</div></td>
             </tr>
         );
     }
@@ -23,9 +23,9 @@ export default class ReposTable extends Component {
           <table className="repos-table">
               <thead>
                   <tr>
-                      <th>Name</th>
-                      <th>Language</th>
-                      <th>Descrition</th>
+                      <th><div>Name</div></th>
+                      <th><div>Language</div></th>
+                      <th><div>Descrition</div></th>
                     </tr>
                 </thead>
               <tbody>
