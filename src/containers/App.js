@@ -3,6 +3,7 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import User from '../components/User';
 import ReposTable from '../components/ReposTable';
+import ReposGraph from '../components/ReposGraph';
 import * as reposTableActions from '../actions/reposTableActions';
 
 import logo from '../logo.svg';
@@ -21,6 +22,7 @@ class App extends Component {
                 <div>
                     <User name={user.name} getReposByUser={getRepos} />
                     <ReposTable repos={repos.repos} fetching={repos.fetching}/>
+                    <ReposGraph repos={repos.repos} fetching={repos.fetching} columnsHeight={200}/>
                 </div>
             </div>
         );

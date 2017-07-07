@@ -9,6 +9,7 @@ export default class ReposTable extends Component {
               <td><div>{rowData.name}</div></td>
               <td><div>{rowData.language}</div></td>
               <td><div>{rowData.description}</div></td>
+              <td><div>{rowData.size}</div></td>
             </tr>
         );
     }
@@ -17,7 +18,7 @@ export default class ReposTable extends Component {
         const { repos, fetching } = this.props;
         const tbodyContent = repos.length > 0 ?
             repos.map((item, index) => this.getRow(item, index)) :
-            <tr><td colSpan="3">Нет данных :(</td></tr>;
+            <tr><td colSpan="4">Нет данных :(</td></tr>;
 
         return (
           <table className="repos-table">
@@ -26,12 +27,13 @@ export default class ReposTable extends Component {
                       <th><div>Name</div></th>
                       <th><div>Language</div></th>
                       <th><div>Descrition</div></th>
+                      <th><div>Size</div></th>
                     </tr>
                 </thead>
               <tbody>
                   {
                         fetching ?
-                          <tr><td colSpan="3">Загрузка...</td></tr>
+                          <tr><td colSpan="4">Загрузка...</td></tr>
                         :
                         tbodyContent
                     }
