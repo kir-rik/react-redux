@@ -1,45 +1,32 @@
 import React, { Component } from 'react';
-import { bindActionCreators } from 'redux';
-import { connect } from 'react-redux';
-import User from '../components/User';
-import ReposTable from '../components/ReposTable';
-import ReposGraph from '../components/ReposGraph';
-import * as reposTableActions from '../actions/reposTableActions';
+// import { bindActionCreators } from 'redux';
+// import { connect } from 'react-redux';
+import Header from '../components/Header';
+import Main from './Main';
+// import * as reposTableActions from '../actions/reposTableActions';
 
-import logo from '../logo.svg';
-import '../App.css';
-
-class App extends Component {
+export default class App extends Component {
     render() {
-        const { user, repos } = this.props;
-        const { getRepos } = this.props.reposTableActions;
         return (
             <div className="App">
-                <div className="App-header">
-                    <img src={logo} className="App-logo" alt="logo" />
-                    <h2>Welcome to React</h2>
-                </div>
-                <div>
-                    <User name={user.name} getReposByUser={getRepos} />
-                    <ReposTable repos={repos.repos} fetching={repos.fetching}/>
-                    <ReposGraph repos={repos.repos} fetching={repos.fetching} columnsHeight={200}/>
-                </div>
+                <Header />
+                <Main/>
             </div>
         );
     }
 }
 
-function mapStateToProps(state) {
-    return {
-        user: state.user,
-        repos: state.repos,
-    };
-}
+// function mapStateToProps(state) {
+//     return {
+//         user: state.user,
+//         repos: state.repos,
+//     };
+// }
 
-function mapDispatchToProps(dispatch) {
-    return {
-        reposTableActions: bindActionCreators(reposTableActions, dispatch),
-    };
-}
+// function mapDispatchToProps(dispatch) {
+//     return {
+//         reposTableActions: bindActionCreators(reposTableActions, dispatch),
+//     };
+// }
 
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+// export default connect(mapStateToProps, mapDispatchToProps)(App);
