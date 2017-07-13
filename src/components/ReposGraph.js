@@ -4,6 +4,12 @@ import palette from '../customLibs/palette';
 
 export default class ReposGraph extends Component {
 
+    static propTypes = {
+        repos: PropTypes.array.isRequired,
+        fetching: PropTypes.bool.isRequired,
+        columnsHeight: PropTypes.number.isRequired,
+    };
+
     columnWidth = 60;
     columnSpaces = 10;
 
@@ -59,9 +65,3 @@ export default class ReposGraph extends Component {
         );
     }
 }
-
-ReposGraph.propTypes = {
-    repos: PropTypes.array.isRequired,
-    fetching: PropTypes.bool.isRequired,
-    columnsHeight: PropTypes.number.isRequired,
-};

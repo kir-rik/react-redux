@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 export default class User extends Component {
+    static propTypes = {
+        getReposByUser: PropTypes.func.isRequired,
+        name: PropTypes.string,
+    };
 
     constructor(props) {
         super(props);
@@ -36,8 +40,3 @@ export default class User extends Component {
         );
     }
 }
-
-User.propTypes = {
-    getReposByUser: PropTypes.func.isRequired,
-    name: PropTypes.string,
-};

@@ -3,6 +3,11 @@ import PropTypes from 'prop-types';
 
 export default class ReposTable extends Component {
 
+    static propTypes = {
+        repos: PropTypes.array.isRequired,
+        fetching: PropTypes.bool.isRequired,
+    };
+
     getRow(rowData, index) {
         return (
           <tr key={index}>
@@ -42,8 +47,3 @@ export default class ReposTable extends Component {
         );
     }
 }
-
-ReposTable.propTypes = {
-    repos: PropTypes.array.isRequired,
-    fetching: PropTypes.bool.isRequired,
-};
