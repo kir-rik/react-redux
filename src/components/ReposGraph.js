@@ -14,8 +14,8 @@ export default class ReposGraph extends Component {
     columnSpaces = 10;
 
     getSizeRange(repos) {
-        if (repos.length === 0) return { min: 0, max: 0 };
         const sizes = repos.map(repo => repo.size);
+
         return { min: Math.min(...sizes), max: Math.max(...sizes) };
     }
 
@@ -23,6 +23,7 @@ export default class ReposGraph extends Component {
 
     getGraphData = function (data, resizeFactor) {
         const colors = this.getColors(data.length);
+
         return data.map((repo, index) => ({
             name: repo.name,
             size: repo.size,
