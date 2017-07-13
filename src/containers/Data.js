@@ -26,9 +26,8 @@ class Data extends Component {
             <div>
                 <User name={user.name} getReposByUser={getRepos} />
                 <Switch>
-                    <Route exact path='/data' component={ReposTableComponent()}/>
-                    {/* <Route exact path='/data/table' component={ReposTableComponent()}/> */}
-                    <Route path='/data/graph' component={ReposGraphComponent()}/>
+                    <Route exact path='/data' component={ReposTableComponent}/>
+                    <Route path='/data/graph' component={ReposGraphComponent}/>
                 </Switch>
             </div>
         );
