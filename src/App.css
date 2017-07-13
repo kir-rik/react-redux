@@ -8,6 +8,7 @@
 }
 
 .App-header {
+  position: relative;
   background-color: #222;
   height: 75px;
   padding: 10px;
@@ -16,6 +17,27 @@
 
 .App-header h2 {
     font-size: 0.75em;
+}
+
+.App-header nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.App-header nav ul {
+    list-style: none;
+    margin: 0;
+}
+
+.App-header nav li{
+    text-align: left;
+}
+
+.App-header nav li a {
+    color: #fff;
+    text-decoration: none;
+    line-height: 1.75em;
 }
 
 .App-intro {
@@ -69,8 +91,4 @@
     margin-right: auto;
     margin-left: auto;
     overflow-x: auto;
-}
-
-.legend span {
-    display: inline-block;
 }
